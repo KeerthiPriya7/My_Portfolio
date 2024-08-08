@@ -4,41 +4,69 @@
     <title>Keerthipriya's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
         }
         header, footer {
             background-color: #4b0082;
             color: white;
             text-align: center;
-            padding: 1em 0;
+            padding: 1.5em 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         nav {
-            background-color: #4b0082;
+            background-color: #6a0dad;
             color: white;
             padding: 1em;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
-            margin: 0 1em;
+            margin: 0 1.5em;
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
         }
         section {
-            padding: 2em;
-            max-width: 1000px;
+            padding: 2.5em;
+            max-width: 1200px;
             margin: auto;
             background-color: white;
-            border-radius: 10px;
+            border-radius: 15px;
             margin-bottom: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #4b0082;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5em;
+        }
+        p {
+            margin-bottom: 1.5em;
+            font-size: 1.1em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 0.5em;
         }
         .about, .skills, .education, .projects, .experience, .certifications, .portfolio, .testimonials, .blog, .contact {
-            background-color: #e6e6fa;
+            background-color: #f7f7ff;
         }
         .project, .experience, .education, .skill, .certification, .testimonial, .blog-post {
             margin-bottom: 2em;
@@ -47,14 +75,30 @@
             display: block;
             width: 100%;
             margin: 1em 0;
-            padding: 0.5em;
+            padding: 0.75em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .contact-form input[type="submit"] {
+            background-color: #4b0082;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #6a0dad;
         }
         img.profile-pic {
             width: 250px;
             height: 300px;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -75,50 +119,97 @@
         <a href="#contact">Contact</a>
     </nav>
     <section id="about" class="about">
-    <h2>About Me</h2>
-    <img src="https://keerthipriya7.github.io/My_Portfolio/Epi%20Photo.jpg" alt="Keerthipriya's photo" class="profile-pic">
-    <p>An IT student pursuing a bachelor's in technology from Vignana Bharathi Institute of Technology in the stream of Information Technology. I am interested in machine learning and web development.</p>
+        <h2>About Me</h2>
+        <img src="https://keerthipriya7.github.io/My_Portfolio/Epi%20Photo.jpg" alt="Keerthipriya's photo" class="profile-pic">
+        <p>Aspiring IT student with a solid foundation in programming and software development principles. Skilled in Python, Java, SQL with practical experience through various projects and internships. Eager to contribute to innovative software solutions and enhance technical expertise in a challenging and dynamic environment.</p>
     </section>
     <section id="skills" class="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Programming Languages: Python, Java</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Machine Learning: TensorFlow, Scikit-Learn</li>
-            <li>Database: Oracle, MySQL</li>
+            <li>Programming Languages: Python, C++, Java</li>
+            <li>Web Technologies: HTML, CSS, JavaScript</li>
+            <li>Databases: MySQL, Firebase</li>
+            <li>Tools & Platforms: Visual Studio Code, Jupyter Notebook</li>
+            <li>Others: PowerBI, ServiceNow</li>
+            <li>Soft Skills: Problem Solving, Quick Learner, Team Player</li>
         </ul>
     </section>
     <section id="education" class="education">
         <h2>Education</h2>
         <div class="education">
-            <h3>Vignana Bharathi Institute of Technology</h3>
-            <p>Bachelor's in Technology, Information Technology</p>
+            <h3>Vignana Bharathi Institute of Technology, Hyderabad, India</h3>
+            <p>Bachelor of Technology in Information Technology, CGPA: 8.13 (2021 - 2025)</p>
+        </div>
+        <div class="education">
+            <h3>Narayana Girls Junior College, Hyderabad, India</h3>
+            <p>MPC, Percentage: 9.1 (2019 - 2021)</p>
+        </div>
+        <div class="education">
+            <h3>St. Anthony’s High School, Hyderabad, India</h3>
+            <p>SSC, Percentage: 9.5 (2019)</p>
         </div>
     </section>
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Healthcare Record Maintenance</h3>
-            <p>Developed a web application for maintaining healthcare records using HTML, CSS, JavaScript, and MySQL.</p>
+            <h3>Credit Card Fraud Detection System</h3>
+            <p>Developed using various ML models such as Logistic Regression, Random Forest, and Decision Tree during the internship at CodSoft.</p>
+        </div>
+        <div class="project">
+            <h3>SMS Fraud Detection System</h3>
+            <p>Implemented during the CodSoft internship, enhancing the accuracy and efficiency of fraud detection processes.</p>
+        </div>
+        <div class="project">
+            <h3>Movie Recommendation System</h3>
+            <p>Created during the Bharath Intern internship using machine learning algorithms to suggest movies based on user preferences.</p>
+        </div>
+        <div class="project">
+            <h3>Healthcare Record Maintenance Application</h3>
+            <p>Developed an app for patients to register with mobile numbers, input health details, and use DNA IDs for unique identification.</p>
         </div>
         <div class="project">
             <h3>Drowsiness Detection System</h3>
-            <p>Implemented a machine learning model to detect driver drowsiness using Python and TensorFlow.</p>
+            <p>A safety technology that rings an alarm if the driver's eyes are closed for over five seconds to prevent accidents caused by fatigue, developed using Python and OpenCV during the SHODH Innovation Hackathon.</p>
         </div>
     </section>
     <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="experience">
-            <h3>CodSoft</h3>
-            <p>Intern in Machine Learning</p>
+            <h3>Intern at CodSoft</h3>
+            <p>- Developed a Credit Card Fraud Detection System using various ML models.<br>
+               - Implemented an SMS Fraud Detection System.</p>
         </div>
         <div class="experience">
-            <h3>Bharath Intern</h3>
-            <p>Intern in Machine Learning</p>
+            <h3>Intern at Bharath Intern</h3>
+            <p>- Created a Movie Recommendation System using machine learning algorithms.<br>
+               - Worked on automation solutions using machine learning techniques.</p>
+        </div>
+        <div class="experience">
+            <h3>Innovate You – National Level Hackathon</h3>
+            <p>- Implemented an app for patients with mobile registration and unique DNA ID identification.</p>
+        </div>
+        <div class="experience">
+            <h3>SHODH Innovation Hackathon</h3>
+            <p>- Developed a safety technology to prevent accidents caused by driver fatigue.</p>
         </div>
     </section>
     <section id="certifications" class="certifications">
-        <h2>Certifications and Awards</h2>
+        <h2>Certifications</h2>
+        <div class="certification">
+            <h3>Python Programming (Red Hat Training Academy)</h3>
+        </div>
+        <div class="certification">
+            <h3>Networking Protocols (Cisco Networking Academy)</h3>
+        </div>
+        <div class="certification">
+            <h3>Web Development (Infosys Spring Board)</h3>
+        </div>
+        <div class="certification">
+            <h3>AWS Cloud Practitioner Essentials</h3>
+        </div>
+        <div class="certification">
+            <h3>Sports Event Web Application Project (Upskillmafia Web Hackathon)</h3>
+        </div>
         <div class="certification">
             <h3>ServiceNow Certified System Administrator (CSA)</h3>
         </div>
@@ -151,9 +242,14 @@
             <textarea name="message" placeholder="Your Message"></textarea>
             <input type="submit" value="Send">
         </form>
+        <p>Email: keerthipriyabattula@gmail.com</p>
+        <p>Phone: +91 9014811091</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/keerthi-priya-a96b00267/" target="_blank">Keerthi Priya</a></p>
+        <p>GitHub: <a href="https://github.com/KeerthiPriya7" target="_blank">KeerthiPriya7</a></p>
     </section>
     <footer>
         <p>&copy; 2024 Keerthipriya. All rights reserved.</p>
     </footer>
+    <script src="pscript.js"></script>
 </body>
 </html>
